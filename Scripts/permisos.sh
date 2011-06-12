@@ -15,11 +15,11 @@ for i in $(ls $path)
 do    
     if [ -f $i ]
     then
-	echo Dando permisos de ejecucion al script $i 
-#	chmod 777 $i
+	echo "Otorgando permisos de ejecucion al script" $i 
+	chmod 777 $i
     fi
 done
 
-echo Permisos otorgados a todos los scripts
+echo "Permisos otorgados a todos los scripts"
 
 exit 0
