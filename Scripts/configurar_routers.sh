@@ -25,6 +25,8 @@ echo "Tabla de ruteo limpia"
 
 #Configurar rutas
 
+cd ./config/tablas_de_ruteo
+
 echo "Configurando las rutas para el router" $i
 old_IFS=$IFS;
 IFS="
