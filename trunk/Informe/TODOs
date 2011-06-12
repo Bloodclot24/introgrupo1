@@ -1,0 +1,1 @@
+- Verificar si el rotuer agrega solo a la tabla de ruteo las redes a las que esta conectado cuando se setean las interfaces o si tienen que estar explicitas en las tablas.
