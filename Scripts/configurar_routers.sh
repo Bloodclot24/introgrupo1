@@ -4,7 +4,7 @@
 # Vacia la tabla de ruteo ya existente
 # Habilita el forwarding de paquetes
 
-if [$# -ne 1]
+if [ $# -ne 1 ]
 then
     echo "Error, cantidad de parametros invalida"
     exit 1
