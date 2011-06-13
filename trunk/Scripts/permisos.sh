@@ -4,7 +4,7 @@
 
 if [ $# -ne 1 ]
 then
-    path_propio=/home/distribuidos/Escritorio/grupo1/Scripts/
+    path_propio=`pwd`
 else
     path_propio=$1
 fi
