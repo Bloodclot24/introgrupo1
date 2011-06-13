@@ -1,0 +1,10 @@
+zone "tilcara.jujuy.dc.fi.uba.ar" {
+    type master;
+    file "/etc/bind/zonas/db.tilcara";
+};
+
+//Singapur 10.69.6.128/27
+zone "15.168.192.in-addr.arpa" {
+     type master;
+     file "${zonesRelPath}/db.resto.hongkong.reversa";
+};

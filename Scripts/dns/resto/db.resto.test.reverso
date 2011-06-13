@@ -1,0 +1,12 @@
+$TTL    604800
+@   IN  SOA resto.jujuy.dc.fi.uba.ar. root.resto.jujuy.dc.fi.uba.ar. (
+                  3     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+
+@		IN	NS   resto.jujuy.dc.fi.uba.ar.
+
+102             IN	PTR  resto1.reverso.resto.jujuy.dc.fi.uba.ar.
+106             IN	PTR  resto2.reverso.resto.jujuy.dc.fi.uba.ar.

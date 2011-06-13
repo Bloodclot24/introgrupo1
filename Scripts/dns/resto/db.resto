@@ -1,0 +1,41 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@   IN  SOA resto.jujuy.dc.fi.uba.ar. root.resto.jujuy.dc.fi.uba.ar. (
+                  3     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+;
+@           IN      NS          resto.jujuy.dc.fi.uba.ar.
+@           IN      A           192.168.15.2
+
+ns          IN      CNAME       resto.jujuy.dc.fi.uba.ar.
+
+;H132
+pekin01     IN      A           192.168.15.2
+kuwait01    IN      A           10.69.6.193
+yakarta01   IN      A           10.27.15.193
+moscu01     IN      A           10.42.5.1
+jerusalem01 IN      A           10.27.15.205
+
+;H114
+jerusalem02 IN      A           10.27.15.206
+ankara01    IN      A           135.143.5.1
+bagdad02    IN      A           10.39.25.2
+seul01      IN      A           10.39.25.129
+
+;H108
+damasco01   IN      A           10.27.15.201
+
+;Apache
+pekin02     IN      A           192.168.15.1
+www         IN      CNAME       pekin02
+
+;FTP
+bagdad01    IN      A           10.39.25.1
+ftp         IN      CNAME       bagdad01
+
+;
