@@ -11,3 +11,4 @@ $TTL    604800
 ;Tokyo
 ;Esta es la otra interfaz del telnet. Se devuelve lo mismo que se habia puesto en el directo
 130	IN	PTR	tokyo01.reverso.tilcara.jujuy.dc.fi.uba.ar.
+1  	IN	PTR	tokyo02.reverso.tilcara.jujuy.dc.fi.uba.ar.

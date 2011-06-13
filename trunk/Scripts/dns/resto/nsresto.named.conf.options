@@ -11,7 +11,7 @@ options {
     // the all-0's placeholder.
 
      forwarders {
-         10.39.25.129;
+         10.39.25.131;
      };
 
     auth-nxdomain no;    # conform to RFC1035

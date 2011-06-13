@@ -11,6 +11,5 @@ $TTL    604800
 ;Bangkok
 65	IN	PTR	bangkok01.reverso.tilcara.jujuy.dc.fi.uba.ar.
 66	IN	PTR	bangkok02.reverso.tilcara.jujuy.dc.fi.uba.ar.
-67	IN	PTR	bangkok03.reverso.tilcara.jujuy.dc.fi.uba.ar.
+67	IN	PTR	hostA.reverso.tilcara.jujuy.dc.fi.uba.ar.
 68	IN	PTR	bangkok04.reverso.tilcara.jujuy.dc.fi.uba.ar.
-

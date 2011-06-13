@@ -8,5 +8,5 @@ $TTL    604800
 
 @           IN      NS          resto.jujuy.dc.fi.uba.ar.
 
-;Moscu
+;Kuwait
 193	IN	PTR	kuwait01.reverso.resto.jujuy.dc.fi.uba.ar.

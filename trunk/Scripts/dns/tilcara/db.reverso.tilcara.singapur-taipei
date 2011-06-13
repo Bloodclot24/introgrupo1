@@ -13,7 +13,7 @@ $TTL    604800
 130	IN	PTR	singapur02.reverso.tilcara.jujuy.dc.fi.uba.ar. 
 
 ;Taipei
-161	IN	PTR	taipei01.reverso.tilcara.jujuy.dc.fi.uba.ar.
+163	IN	PTR	taipei01.reverso.tilcara.jujuy.dc.fi.uba.ar.
 162	IN	PTR	taipei02.reverso.tilcara.jujuy.dc.fi.uba.ar.
-163	IN	PTR	taipei03.reverso.tilcara.jujuy.dc.fi.uba.ar.
+161	IN	PTR	taipei03.reverso.tilcara.jujuy.dc.fi.uba.ar.
 
