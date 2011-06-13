@@ -38,4 +38,10 @@ www         IN      CNAME       pekin02
 bagdad01    IN      A           10.39.25.1
 ftp         IN      CNAME       bagdad01
 
-;
+;Host B
+bagdad03    IN      A           10.39.25.3
+hostB         IN      CNAME       bagdad03
+
+;Host C
+moscu02     IN      A           10.42.5.2
+hostC       IN      CNAME       moscu02

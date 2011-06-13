@@ -16,3 +16,26 @@ zone "25.39.10.in-addr.arpa" {
      file "/etc/bind/zonas/db.reverso.resto.bagdad-seul";
 };
 
+//Ankara 135.143.5.0
+zone "5.143.135.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.ankara";
+};
+
+//Pekin 192.168.15.0
+zone "15.168.192.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.pekin";
+};
+
+//Moscu 10.42.5.0
+zone "5.42.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.moscu";
+};
+
+//Kuwait 10.69.6.192
+zone "6.69.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.kuwait";
+};
