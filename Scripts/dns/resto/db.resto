@@ -10,7 +10,7 @@ $TTL    604800
              604800 )   ; Negative Cache TTL
 ;
 @           IN      NS          resto.jujuy.dc.fi.uba.ar.
-@           IN      A           192.168.15.2
+@           IN      A           10.27.15.206
 
 ns          IN      CNAME       resto.jujuy.dc.fi.uba.ar.
 
