@@ -3,8 +3,21 @@ zone "tilcara.jujuy.dc.fi.uba.ar" {
     file "/etc/bind/zonas/db.tilcara";
 };
 
-//Singapur 10.69.6.128/27
-zone "15.168.192.in-addr.arpa" {
+//Singapur 10.69.6.128/27, Taipei 10.69.6.160/27
+zone "6.69.10.in-addr.arpa" {
      type master;
-     file "${zonesRelPath}/db.resto.hongkong.reversa";
+     file "/etc/bind/zonas/db.reverso.tilcara.singapur-taipei";
 };
+
+//Bangkok 10.39.25.64/27
+zone "25.39.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.tilcara.bangkok";
+};
+
+//Tokyo 10.69.5.0/24
+zone "5.69.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.tilcara.tokyo";
+};
+

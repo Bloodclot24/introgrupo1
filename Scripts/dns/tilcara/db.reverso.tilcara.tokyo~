@@ -1,0 +1,13 @@
+$TTL    604800
+@   IN  SOA tilcara.jujuy.dc.fi.uba.ar. root.tilcara.jujuy.dc.fi.uba.ar. (
+                  2     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+
+@           IN      NS          tilcara.jujuy.dc.fi.uba.ar.
+
+;Tokyo
+;Esta es la otra interfaz del telnet. Se devuelve lo mismo que se habia puesto en el directo
+130	IN	PTR	tokyo01.reverso.tilcara.jujuy.dc.fi.uba.ar.

@@ -20,7 +20,8 @@ fi
 cp -f dns/resto/db.resto /etc/bind/zonas/db.resto;
 
 #Cargo las zonas que se necesitan para busqueda inversa.
-cp -f dns/resto/db.resto.test.reverso /etc/bind/zonas/db.resto.test.reverso;
+cp -f dns/resto/db.reverso.resto.bagdad-seul /etc/bind/zonas/db.reverso.resto.bagdad-seul;
+cp -f dns/resto/db.reverso.resto.yakarta-damasco-jerusalem /etc/bind/zonas/db.reverso.resto.yakarta-damasco-jerusalem;
 
 echo 'Se han cargado exitosamente los archivos de configuracion';
 
