@@ -1,22 +1,23 @@
 #!/bin/bash
-#uso: network_interfaces <router>
+#uso: network_interfaces <router> <interfaz>
 
-if [ "$#" -ne 1 ]
+if [ "$#" -ne 2 ]
 then
 	echo "ERROR: Cantidad incorrecta de parametros"	
-	echo "Uso: ./network_interfaces <router>"
+	echo "Uso: ./network_interfaces <router> <interfaz>"
 	#codigo de retorno 1 para cantidad incorrecta de parametros
 	exit 1
 fi
 
 router=$1
+interface=$2
 
 #borro las interfaces previamente definidas
-sudo ifconfig eth2 down
-sudo ifconfig eth2 up
+sudo ifconfig $interface down
+sudo ifconfig $interface up
 
 #cargo las interfaces para este router
-cd ./config/interfaces
+cd ./config/interfaces/
 
 if [ ! -r "$1" ]
 then
@@ -28,7 +29,8 @@ fi
 i=0
 for interfaz in `cat "$router"`
 do
-	`echo "$interfaz" | sed "s/\(^[0-9,.]*\);\([0-9,.]*$\)/sudo ifconfig eth2:$i \1 netmask \2/"`
+	`echo "$interfaz" | sed "s/^\([^;]*\);\([^;]*\)$/sudo ifconfig $interface:$i \1 netmask \2/"`
+	echo "ifconfig "$interface:$i
 	let i=$i+1
 done
 
