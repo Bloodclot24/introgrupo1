@@ -1,0 +1,11 @@
+zone "jujuy.dc.fi.uba.ar" {
+    type master;
+    file "/etc/bind/zonas/db.jujuy";
+};
+
+zone "1.168.192.in-addr.arpa"{
+    type forward;
+    forwarders { 192.168.1.106; };
+};
+
+

@@ -1,0 +1,11 @@
+zone "resto.jujuy.dc.fi.uba.ar" {
+    type master;
+    file "/etc/bind/zonas/db.resto";
+};
+
+
+zone "1.168.192.in-addr.arpa"{
+     type master;
+     file "/etc/bind/zonas/db.resto.test.reverso";
+};
+

@@ -1,0 +1,27 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@   IN  SOA jujuy.dc.fi.uba.ar. root.jujuy.dc.fi.uba.ar. (
+                  1     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+;
+@           IN      NS          jujuy.dc.fi.uba.ar.
+
+; Adopto la primer direccion IP como la correspondiente a la interfaz de H116 y tambien como DNS root
+@           IN      A           10.39.25.129 
+
+ns          IN      CNAME       jujuy.dc.fi.uba.ar.
+
+tilcara     IN      NS          nstilcara.jujuy.dc.fi.uba.ar.
+
+resto       IN      NS          nsresto.jujuy.dc.fi.uba.ar.
+
+;Voy a poner la IP del primer host de la red de taipei. Corresponde a una interfaz de H102
+nstilcara  IN      A           10.69.6.161 ; Esta es la IP del secundario para tilcara
+;Voy a poner la IP del primer host de la red de Jerusalem. Corresponde a una interfaz de H132
+nsresto    IN      A           10.27.15.205 ; Esta es la IP del secundario para el resto.
+
