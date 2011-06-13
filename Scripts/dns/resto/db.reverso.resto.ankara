@@ -8,11 +8,6 @@ $TTL    604800
 
 @           IN      NS          resto.jujuy.dc.fi.uba.ar.
 
-;Bagdad
-1	IN	PTR	ftp.reverso.resto.jujuy.dc.fi.uba.ar.
-2	IN	PTR	bagdad02.reverso.resto.jujuy.dc.fi.uba.ar.
-3       IN	PTR	hostC.reverso.resto.jujuy.dc.fi.uba.ar. 
-
-;Seul
-129	IN	PTR	seul01.reverso.resto.jujuy.dc.fi.uba.ar. 
+;Ankara
+1	IN	PTR	ankara01.reverso.resto.jujuy.dc.fi.uba.ar.
 
