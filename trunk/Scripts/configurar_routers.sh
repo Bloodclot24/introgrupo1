@@ -12,10 +12,10 @@ fi
 
 #Detener servicios
 
-#service NetworkManager stop > /dev/null
-#service network-manager stop > /dev/null
-#service apparmor stop > /dev/null
-#service avahi-daemon stop > /dev/null
+service NetworkManager stop > /dev/null
+service network-manager stop > /dev/null
+service apparmor stop > /dev/null
+service avahi-daemon stop > /dev/null
 
 #Eliminar configuracion de rutas anteriores
 
@@ -53,5 +53,7 @@ echo "Habilitando el forwarding de paquetes en el router" $1
 sysctl -w net.ipv4.ip_forward=1
 echo "Forwarding de paquetes habilitado"
 
+sysctl -w net.ipv4.conf.all.accept_redirects=0
+sysctl -w net.ipv4.conf.all.send_redirects=0
 exit 0
 
