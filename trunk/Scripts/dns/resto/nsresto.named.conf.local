@@ -4,8 +4,15 @@ zone "resto.jujuy.dc.fi.uba.ar" {
 };
 
 
-zone "1.168.192.in-addr.arpa"{
+//Yakarta 10.27.15.192/29, Damasco 10.69.6.200/30, Jerusalem 10.69.6.204/30
+zone "6.69.10.in-addr.arpa" {
      type master;
-     file "/etc/bind/zonas/db.resto.test.reverso";
+     file "/etc/bind/zonas/db.reverso.resto.yakarta-damasco-jerusalem";
+};
+
+//Bagdad 10.39.25.0/26, Seul 10.39.25.128/25
+zone "25.39.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.bagdad-seul";
 };
 

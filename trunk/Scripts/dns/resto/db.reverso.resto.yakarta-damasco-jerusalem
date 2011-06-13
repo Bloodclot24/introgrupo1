@@ -1,0 +1,23 @@
+$TTL    604800
+@   IN  SOA resto.jujuy.dc.fi.uba.ar. root.resto.jujuy.dc.fi.uba.ar. (
+                  2     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+
+@           IN      NS          resto.jujuy.dc.fi.uba.ar.
+
+;Yakarta
+193	IN	PTR	yakarta01.reverso.resto.jujuy.dc.fi.uba.ar.
+194	IN	PTR	yakarta02.reverso.resto.jujuy.dc.fi.uba.ar. 
+
+;Damasco
+201	IN	PTR	damasco01.reverso.resto.jujuy.dc.fi.uba.ar. 
+202	IN	PTR	damasco02.reverso.resto.jujuy.dc.fi.uba.ar. 
+
+
+;Jerusalem
+205	IN	PTR	jerusalem01.reverso.resto.jujuy.dc.fi.uba.ar. 
+206	IN	PTR	jerusalem02.reverso.resto.jujuy.dc.fi.uba.ar. 
+

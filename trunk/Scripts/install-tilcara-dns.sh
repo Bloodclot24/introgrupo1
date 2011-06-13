@@ -20,7 +20,9 @@ fi
 cp -f dns/tilcara/db.tilcara /etc/bind/zonas/db.tilcara;
 
 #Cargo las zonas que se necesitan para busqueda inversa.
-cp -f dns/tilcara/db.192 /etc/bind/zonas/db.192;
+cp -f dns/tilcara/db.reverso.tilcara.bangkok /etc/bind/zonas/db.reverso.tilcara.bangkok;
+cp -f dns/tilcara/db.reverso.tilcara.singapur-taipei /etc/bind/zonas/db.reverso.tilcara.singapur-taipei;
+cp -f dns/tilcara/db.reverso.tilcara.tokyo /etc/bind/zonas/db.reverso.tilcara.tokyo;
 
 echo 'Se han cargado exitosamente los archivos de configuracion';
 

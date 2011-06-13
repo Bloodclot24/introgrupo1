@@ -3,9 +3,28 @@ zone "jujuy.dc.fi.uba.ar" {
     file "/etc/bind/zonas/db.jujuy";
 };
 
-zone "1.168.192.in-addr.arpa"{
-    type forward;
-    forwarders { 192.168.1.106; };
+//Redirijo para el reverso en tilcara
+
+//Singapur 10.69.6.128/27, Taipei 10.69.6.160/27
+zone "6.69.10.in-addr.arpa" {
+     type forward;
+    forwarders { 10.69.6.161; };
 };
+
+//Bangkok 10.39.25.64/27
+zone "25.39.10.in-addr.arpa" {
+     type forward;
+    forwarders { 10.69.6.161; };
+};
+
+//Tokyo 10.69.5.0/24
+zone "5.69.10.in-addr.arpa" {
+     type forward;
+    forwarders { 10.69.6.161; 10.27.15.205;};
+};
+
+
+
+//Redirijo para el reverso en resto
 
 
