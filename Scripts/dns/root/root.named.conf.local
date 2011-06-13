@@ -14,13 +14,13 @@ zone "6.69.10.in-addr.arpa" {
 //Bangkok 10.39.25.64/27
 zone "25.39.10.in-addr.arpa" {
      type forward;
-    forwarders { 10.69.6.161; };
+    forwarders { 10.69.6.161; 10.27.15.205;};
 };
 
 //Tokyo 10.69.5.0/24
 zone "5.69.10.in-addr.arpa" {
      type forward;
-    forwarders { 10.69.6.161; 10.27.15.205;};
+    forwarders { 10.69.6.161;};
 };
 
 

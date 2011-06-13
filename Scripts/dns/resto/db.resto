@@ -18,7 +18,7 @@ ns          IN      CNAME       resto.jujuy.dc.fi.uba.ar.
 pekin01     IN      A           192.168.15.2
 kuwait01    IN      A           10.69.6.193
 yakarta01   IN      A           10.27.15.193
-moscu01     IN      A           10.42.5.1
+moscu01     IN      A           10.42.5.2
 jerusalem01 IN      A           10.27.15.205
 
 ;H114
@@ -40,8 +40,8 @@ ftp         IN      CNAME       bagdad01
 
 ;Host B
 bagdad03    IN      A           10.39.25.3
-hostB         IN      CNAME       bagdad03
+hostB       IN      CNAME       bagdad03
 
 ;Host C
-moscu02     IN      A           10.42.5.2
+moscu02     IN      A           10.42.5.3
 hostC       IN      CNAME       moscu02
