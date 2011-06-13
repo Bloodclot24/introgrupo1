@@ -1,0 +1,19 @@
+Desde 101:
+	a Taipei a traves de 107 con costo 1
+	a singapur a traves de 103 con costo 2
+	a tokyo a traves de 107 con costo 2 
+
+Desde 102:
+	a Singapur a traves de 107 (x Taipei) con costo 1
+	a Tokyo a traves de 103 (x Taipei) con costo 1
+
+Desde 103:
+	a Singapur a traves de 107 (x Taipei) con costo 1
+
+Desde 107:
+	a Tokyo a traves de 103 (x Taipei) con costo 1
+
+Desde 108:
+	a Taipei a traves de 107 con costo 1
+	a Singapur a traves de 103 con costo 2
+	a Tokyo a traves de 107 con costo 2
