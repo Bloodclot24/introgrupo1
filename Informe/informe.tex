@@ -130,13 +130,13 @@
   \hline
     Mari, Sebastian & 88652 & marisebastian@gmail.com \\
   \hline
-    Morandi, Nicolas & XXXX & XXXX@gmail.com \\
+    Morandi, Nicolas & 88091 & nicomorandi@gmail.com \\
   \hline
-    Piccoli, Sebastian & XXXX & seba.piccoli@gmail.com \\
+    Piccoli, Sebastian & 89257 & seba.piccoli@gmail.com \\
   \hline
     Roberts, Karen & 88062 & karenroberts16@gmail.com \\
   \hline
-    Wolsdorf, Diego & XXXX & XXXX@gmail.com \\
+    Wolsdorf, Diego & 88162 & diegow88@gmail.com \\
   \hline
     Ygounet, Guido & 88246 & gygounet@gmail.com \\
   \hline
@@ -659,39 +659,109 @@ A continuac\'on se incluyen las tablas de ruteo para todos los routers.
 
 \subsection{Rutas alternativas}
 
+Para los routers que fue posible, se calcularon mediante Dijkstra, caminos alternativos para las redes a las cuales era posible llegar por medio de otra interfaz. En algunos casos se obtuvieron rutas alternativas de costo m\'i nimo, en otros casos el costo fue superior.
+Se pudieron obtener caminos de contingencia para H101 (a Taipei, Singapur y Tokyo), H102 (a Singapur y Tokyo), H103 (a Singapur), H107 (a Tokyo) y H108 (a Taipei, Singapur y Tokyo).
+Esto se puede apreciar con m\'as claridad en la siguiente tabla:
 
+\begin{table}
+  \begin{center}
+    \begin{tabular}{|l|l|l|l|l|}
+      \hline
+         \bf{Router} & \bf{Direcci\'on} & \bf{M\'ascara} & \bf{Gateway} & \bf{M\'etrica} \\
+      \hline 
+	H101 & 10.69.6.160  & 255.255.255.224 & 10.39.25.67 & 1 \\
+	H101 & 10.69.6.128  & 255.255.255.224 & 10.39.25.66 & 2 \\
+            H101 & 10.69.5.0  & 255.255.255.0 & 10.39.25.67 & 2 \\
+            H102 & 10.69.6.128  & 255.255.255.224 & 10.69.6.162 & 1 \\
+            H102 & 10.69.5.0  & 255.255.255.0 & 10.69.6.161 & 1 \\
+            H103 & 10.69.6.128  & 255.255.255.224 & 10.69.6.162 & 1 \\
+            H107 & 10.69.5.0  & 255.255.255.0 & 10.69.6.161 & 1 \\
+	H108 & 10.69.6.160  & 255.255.255.224 & 10.39.25.67 & 1 \\
+	H108 & 10.69.6.128  & 255.255.255.224 & 10.39.25.66 & 2 \\
+            H108 & 10.69.5.0  & 255.255.255.0 & 10.39.25.67 & 2 \\
+    \hline
+    \end{tabular} \\
+  \end{center}
+  \caption{Rutas alternativas.}
+\end{table}
 
 
 \section{DNS}
-La configuración de los servidores DNS, según lo indicado en el enunciado del trabajo práctico, debe realizarse utilizando un DNS root, de nivel 1, y dos DNS de nivel 2. 
+
+La configuraci\'on de los servidores DNS, seg\'un lo indicado en el enunciado del trabajo pr\'actico, debi\'o realizarse utilizando un DNS root, de nivel 1, y dos DNS de nivel 2. 
 El DNS de nivel 1 se encarga de hacer forward entre los DNS de nivel 2, es decir, deriva las consultas al DNS correspondiente.
 Los DNS de nivel 2 son los encargados de resolver las consultas entre los distintos hosts.
 Los servidores deben poder resolver tanto consultas directas (preguntando por un dominio y devolviendo la ip correspondiente a ese dominio) como reversas (preguntando por una ip y devolviendo el nombre del dominio que tiene esa ip).
-Los servidores que tenemos son:
+Los servidores se encuentran fijos por el enunciado:
 	- root en H116
 	- 1 de nivel 2 en H102 para la sede Tilcara
 	- 1 de nivel 2 en H132 para el resto de las sedes, Humahuaca y La Quiaca
 
-El H102 además de resolver las consultas para los hosts que estén dentro de las subredes en la sede Tilcara, también va a tener el servidor telnet.
-El H132 además de resolver las consultas para los hosts que estén dentro de las subredes en las sedes Humahuaca y La Quiaca, también va a tener los servidores web y ftp.
-
+El H102, adem\'as de resolver las consultas para los hosts que est\'en dentro de las subredes en la sede Tilcara, es el servidor Telnet.
+El H132, adem\'as de resolver las consultas para los hosts que est\'en dentro de las subredes en las sedes Humahuaca y La Quiaca, tambi\'en tendr\'a los servidores web y ftp.
 
 Utilizamos el BIND9 para emular un DNS en una pc.
 
-Todos los equipos que necesiten comunicarse con otros, lo harán a través del root, el cual derivará al DNS correspondiente según la sede donde se encuentre el host destino.
+Todos los equipos que necesiten comunicarse con otros, lo har\'an a trav\'es del root, el cual derivar\'a al DNS correspondiente seg\'un la sede donde se encuentre el host destino.
 
-En caso que el DNS root no esté activo, no se podrán realizar consultas entre las sedes Tilcara y resto (Humahuaca y La Quiaca) ya que el DNS root es el que conecta a ambos DNS de nivel 2.
-Del mismo modo, si alguno de los DNS de nivel 2 no están activos, tampoco se podrán realizar consultas entre ambas sedes.
+En caso que el DNS root no est\'e activo, no se podr\'an realizar consultas entre las sedes Tilcara y resto (Humahuaca y La Quiaca) ya que el DNS root es el que conecta a ambos DNS de nivel 2.
+Del mismo modo, si alguno de los DNS de nivel 2 no est\'an activos, tampoco se podr\'an realizar consultas entre ambas sedes.
 
-Para levantar un DNS en una máquina, hay que correr el script ./install-dns.sh y pasarle como parámetro:
-	root-dns ----->	si se quiere levantar el DNS root
-	tilcara-dns --> si se quiere levantar el DNS para la sede Tilcara
-	resto-dns ---->	si se quiere levantar el DNS para las sedes Humahuaca y La Quiaca
+Para levantar un DNS en una m\'aquina, hay que correr el script ./install-dns.sh y pasarle como par\'ametro:
+	root-dns: si se quiere levantar el DNS root
+	tilcara-dns: si se quiere levantar el DNS para la sede Tilcara
+	resto-dns: si se quiere levantar el DNS para las sedes Humahuaca y La Quiaca
 
 \section{Simulación en la sala}
+Para la simulaci\'on en la sala, se prepararon una serie de scripts cuya con el objetivo de automatizar y acelerar el proceso de configuraci\'on de los routers y hosts necesarios, y evitar errores humanos.
+Se transcribe a continuaci\'on una breve reseña cuya finalidad es explicar someramente la funcionalidad de cada uno de los scripts:
+
+permisos.sh:
+Este script tiene como intenci\'on otorgar los permisos de ejecuci\'on necesarios al resto de los scripts, dejando listo el escenario para realizar el resto de las configuraciones.
+
+configurar\_routers.sh:
+Este script recibe por par\'ametro el router a configurar y la interfaz a utilizar, y se encarga de cargar la tabla de ruteo, eliminando previamente las configuraciones anteriores, y habilitando le forwarding de paquetes.
+Al finalizar la ejecuci\'on, el equipo quedar\'a cargado con las rutas para acceder a cada una de las redes de la topolog\'ia
+Se provee como apoyo un archivo por cada uno de los routers, que contiene una lista de rutas, indicando para cada una red, m\'ascara, gateway y m\'etrica (n\'umero de hops).
+
+network\_interfaces.sh:
+Recibe tambi\'en por par\'ametro el router y la interfaz a configurar, y seg\'un los archivos de configuraci\'on correspondiente a cada router, lo configura eliminando las configuraciones anteriores.
+El equipo quedar\'a configurado con todas las interfaces correspondientes al router especificado.
+El archivo de configuraci\'on contiene una lista de las interfaces con sus correspondientes m\'ascaras.
+
+habilitar\_servicios.sh:
+En este caso, la funcionalidad del script es habilitar el servicio que se desee para ese equipo, pudiendo escogerse los servicios de FTP, Telnet y Web.
+
+instalar\_servicios.sh:
+En caso de no contar el equipo con el servicio correspondiente, y vi\'endose en la necesidad de utilizarlo, este script instalar\'a el servicio (FTP, Telnet o Web).
+
+instalar-root-dns.sh:
+Este script configura el equipo como root para el servicio de DNS.
+El mismo cargar\'a las zonas correspondientes, tanto para consultas directas como inversas.
+El script podr\'a instalar bind9 en caso de requerirlo.
+
+instalar-tilcara-dns.sh:
+Similar al anterior, en este caso se trata del servicio de DNS con autoridad para la zona de Tilcara.
+
+instalar-resto-dns.sh:
+En este caso, la zona a configurar es la de 'resto'.
 
 \section{Conclusiones}
 
+Con la realizaci\'on de este trabajo pr\'actico, pudimos aplicar los conocimientos adquiridos durante todo el cuatrimestre, integrando los distintos temas vistos, tanto en la clase te\'orica como en la pr\'actica.
+Caben destacarse las siguientes pautas de aprendizaje identificadas:
+
+Se aprendi\'o c\'omo configurar una red de mediano tamaño, en un recorrido que incluye desde la asignaci\'on inicial de subredes (dados rangos de direcciones a utilizar), hasta la configuraci\'on de los routers y hosts que la componen.
+
+Para la asignaci\'on de los rangos de direcciones para cada una de las subredes se utilizaron los conocimientos adquiridos sobre IP, y respetando la RFC950.
+
+Al respecto, se realiz\'o la configuraci\'on de las diferentes interfaces a las cuales estaba asignado cada uno de los routers que se deb\'ian simular, indicando para cada uno la correspondiente m\'ascara.
+
+Se debi\'o tambi\'en armar las tablas de ruteo, logrando comunicaci\'on entre dos puntos cualesquiera de la red, sin la utilizaci\'on de un default gateway. En cada router se indic\'o para cada subred posible el gateway que deb\'ia utilizarse, agregando como informaci\'on adicional el costo de cada ruta. Para calcular el costo se utilizaron conocimientos adquiridos de ruteo din\'amico.
+
+Otro de los objetivos fue la realizaci\'on de un servidor DNS, con dos zonas distintas, cada una de las cuales estaba bajo la autoridad de un servidor distinto. Se implementaron consultas directas en inversas al DNS, logrando que este pudiese resolver dominios en direcciones IP y viceversa. Estos dominios fueron asignados de acuerdo a los criterios especificados en el enunciado.
+
+Para concluir, puede decirse que el trabajo realizado ayud\'o a fijar los conocimientos que fueron aprendi\'endose durante el desarrollo de la materia, en forma integral y completa.
 
 % ------------------------------ Bibliografía -------------------------------
 
@@ -705,6 +775,14 @@ Para levantar un DNS en una máquina, hay que correr el script ./install-dns.sh 
 
 \end{thebibliography}
 
+\newpage
+\section{Anexo}
+Se provee como anexo el grafo utilizado para modelar la topolog\'ia y calcular las rutas de cada uno de los routers, y sus respectivas m\'etricas:
+
+\begin{center}
+\includegraphics[scale=0.3]{./grafo}\\
+\small{\textsc{Grafo de la topolog\'ia propuesta}}\\
+\end{center}
 
 % ------------------------------ Fin del tp -------------------------------
 
