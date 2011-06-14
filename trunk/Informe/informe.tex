@@ -128,7 +128,7 @@
   \hline
     \textbf{Apellido, Nombre} & \textbf{Nro. Padrón} & \textbf{E-mail} \\
   \hline
-    Mari, Sebastian & XXXX & XXXX@gmail.com \\
+    Mari, Sebastian & 88652 & marisebastian@gmail.com \\
   \hline
     Morandi, Nicolas & XXXX & XXXX@gmail.com \\
   \hline
@@ -663,7 +663,30 @@ A continuac\'on se incluyen las tablas de ruteo para todos los routers.
 
 
 \section{DNS}
+La configuración de los servidores DNS, según lo indicado en el enunciado del trabajo práctico, debe realizarse utilizando un DNS root, de nivel 1, y dos DNS de nivel 2. 
+El DNS de nivel 1 se encarga de hacer forward entre los DNS de nivel 2, es decir, deriva las consultas al DNS correspondiente.
+Los DNS de nivel 2 son los encargados de resolver las consultas entre los distintos hosts.
+Los servidores deben poder resolver tanto consultas directas (preguntando por un dominio y devolviendo la ip correspondiente a ese dominio) como reversas (preguntando por una ip y devolviendo el nombre del dominio que tiene esa ip).
+Los servidores que tenemos son:
+	- root en H116
+	- 1 de nivel 2 en H102 para la sede Tilcara
+	- 1 de nivel 2 en H132 para el resto de las sedes, Humahuaca y La Quiaca
 
+El H102 además de resolver las consultas para los hosts que estén dentro de las subredes en la sede Tilcara, también va a tener el servidor telnet.
+El H132 además de resolver las consultas para los hosts que estén dentro de las subredes en las sedes Humahuaca y La Quiaca, también va a tener los servidores web y ftp.
+
+
+Utilizamos el BIND9 para emular un DNS en una pc.
+
+Todos los equipos que necesiten comunicarse con otros, lo harán a través del root, el cual derivará al DNS correspondiente según la sede donde se encuentre el host destino.
+
+En caso que el DNS root no esté activo, no se podrán realizar consultas entre las sedes Tilcara y resto (Humahuaca y La Quiaca) ya que el DNS root es el que conecta a ambos DNS de nivel 2.
+Del mismo modo, si alguno de los DNS de nivel 2 no están activos, tampoco se podrán realizar consultas entre ambas sedes.
+
+Para levantar un DNS en una máquina, hay que correr el script ./install-dns.sh y pasarle como parámetro:
+	root-dns ----->	si se quiere levantar el DNS root
+	tilcara-dns --> si se quiere levantar el DNS para la sede Tilcara
+	resto-dns ---->	si se quiere levantar el DNS para las sedes Humahuaca y La Quiaca
 
 \section{Simulación en la sala}
 
