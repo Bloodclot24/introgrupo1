@@ -1,0 +1,58 @@
+zone "jujuy.dc.fi.uba.ar" {
+    type master;
+    file "/etc/bind/zonas/db.jujuy";
+};
+
+//Redirijo para el reverso en tilcara
+
+//Singapur 10.69.6.128/27; Taipei 10.69.6.160/27
+zone "6.69.10.in-addr.arpa" {
+     type forward;
+    forwarders { 10.69.6.163; };
+};
+
+//Bangkok 10.39.25.64/27
+zone "25.39.10.in-addr.arpa" {
+     type forward;
+    forwarders { 10.69.6.163;};
+};
+
+//Tokyo 10.69.5.0/24
+zone "5.69.10.in-addr.arpa" {
+     type forward;
+    forwarders { 10.69.6.163;};
+};
+
+
+
+//Redirijo para el reverso en resto
+
+//Damasco 10.27.15.200/30; Jerusalen 10.27.15.204/30; Yakarta 10.27.15.192/29
+zone "15.27.10.in-addr.arpa" {
+    type forward;
+    forwarders { 10.27.15.206: }
+};
+
+//Seul 10.39.25.128/25; Bagdag 10.39.25.0/22
+zone "25.39.10.in-addr.arpa" {
+    type forward;
+    forwarders { 10.27.15.206; }
+};
+
+//Beirut 10.69.6.224/27; Kuwait 10.69.6.192/27
+zone "6.69.10.in-addr.arpa" {
+    type forward;
+    forwarders { 10.27.15.206; }
+};
+
+//Moscu 10.42.5.0/24
+zone "5.42.10.in-addr.arpa" {
+    type forward;
+    forwarders { 10.27.15.206; }
+};
+
+//Pekin 192.168.15.0/24
+zone "15.168.192.in-addr.arpa" {
+    type forward;
+    forwarders { 10.27.15.206; }
+};

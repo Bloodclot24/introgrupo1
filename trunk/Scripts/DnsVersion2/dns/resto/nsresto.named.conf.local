@@ -1,0 +1,62 @@
+zone "resto.jujuy.dc.fi.uba.ar" {
+    type master;
+    file "/etc/bind/zonas/db.resto";
+};
+
+zone "tilcara.jujuy.dc.fi.uba.ar" {
+    type forward;
+    forwarders { 10.39.25.131; }
+};
+
+//Yakarta 10.27.15.192/29, Damasco 10.27.15.200/30, Jerusalem 10.27.15.204/30
+zone "15.27.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.yakarta-damasco-jerusalem";
+};
+
+//Bagdad 10.39.25.0/26, Seul 10.39.25.128/25
+zone "25.39.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.bagdad-seul-bangkok";
+};
+
+//Ankara 135.143.5.0
+zone "5.143.135.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.ankara";
+};
+
+//Pekin 192.168.15.0
+zone "15.168.192.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.pekin";
+};
+
+//Moscu 10.42.5.0
+zone "5.42.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.moscu";
+};
+
+//Kuwait 10.69.6.192
+zone "6.69.10.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso.resto.kuwait-taipei-singapur";
+};
+
+
+
+zone "reverso.tilcara.jujuy.dc.fi.uba.ar" {
+      type forward;
+      forwarders { 10.39.25.131; }
+};
+
+zone "reverso.resto.jujuy.dc.fi.uba.ar" {
+      type master
+      file "/etc/bind/zonas/db.reverso.resto";
+};
+
+zone "in-addr.arpa" {
+      type forward;
+      forwarders { 10.39.25.131; }
+};
