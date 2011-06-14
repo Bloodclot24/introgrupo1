@@ -1,0 +1,25 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	0
+@	IN	SOA	tilcara.jujuy.dc.fi.uba.ar. root.(
+			      1		; Serial
+			     30		; Refresh
+			     30		; Retry
+			     60		; Expire
+			     0
+			     )
+
+@           IN      NS          tilcara.jujuy.dc.fi.uba.ar.
+
+;Singapur
+129		CNAME	telnet.reverso.tilcara.jujuy.dc.fi.uba.ar.
+130		CNAME	singapur02.reverso.tilcara.jujuy.dc.fi.uba.ar. 
+
+;Taipei
+163		CNAME	taipei01.reverso.tilcara.jujuy.dc.fi.uba.ar.
+162		CNAME	taipei02.reverso.tilcara.jujuy.dc.fi.uba.ar.
+161		CNAME	taipei03.reverso.tilcara.jujuy.dc.fi.uba.ar.
+
+;Kuwait
+193		CNAME	kuwait01.reverso.resto.jujuy.dc.fi.uba.ar.

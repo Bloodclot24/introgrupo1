@@ -1,0 +1,38 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	resto.jujuy.dc.fi.uba.ar. root.(
+			      1		; Serial
+			     30		; Refresh
+			     30		; Retry
+			     60		; Expire
+			     1h
+			     )
+
+@		IN	NS     resto.jujuy.dc.fi.uba.ar.
+
+damasco01           PTR   damasco01.resto.jujuy.dc.fi.uba.ar.
+damasco02           PTR   damasco02.resto.jujuy.dc.fi.uba.ar.
+
+seul01              PTR   seul01.resto.jujuy.dc.fi.uba.ar.
+seul02              PTR   seul02.resto.jujuy.dc.fi.uba.ar.
+
+bagdag02            PTR   bagdag02.resto.jujuy.dc.fi.uba.ar.
+ftp                 PTR   ftp.resto.jujuy.dc.fi.uba.ar.
+hostB               PTR   hostB.resto.jujuy.dc.fi.uba.ar.
+
+ankara01            PTR   ankara01.resto.jujuy.dc.fi.uba.ar.
+
+jerusalem01         PTR  jerusalem01.resto.jujuy.dc.fi.uba.ar.
+jerusalem02         PTR  jerusalem02.resto.jujuy.dc.fi.uba.ar.
+
+moscu01             PTR  moscu01.resto.jujuy.dc.fi.uba.ar.
+hostC               PTR  hostC.resto.jujuy.dc.fi.uba.ar.
+
+yakarta01           PTR  yakarta01.resto.jujuy.dc.fi.uba.ar.
+
+kuwait01            PTR  kuwait01.resto.jujuy.dc.fi.uba.ar.
+
+pekin01             PTR  pekin01.resto.jujuy.dc.fi.uba.ar.
+www		    PTR  www.resto.jujuy.dc.fi.uba.ar.
