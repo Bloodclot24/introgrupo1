@@ -13,8 +13,8 @@ router=$1
 interface=$2
 
 #borro las interfaces previamente definidas
-sudo ifconfig $interface down
-sudo ifconfig $interface up
+ifconfig $interface down
+ifconfig $interface up
 
 #cargo las interfaces para este router
 cd ./config/interfaces/
@@ -29,7 +29,7 @@ fi
 i=0
 for interfaz in `cat "$router"`
 do
-	`echo "$interfaz" | sed "s/^\([^;]*\);\([^;]*\)$/sudo ifconfig $interface:$i \1 netmask \2/"`
+	`echo "$interfaz" | sed "s/^\([^;]*\);\([^;]*\)$/ifconfig $interface:$i \1 netmask \2/"`
 	echo "ifconfig "$interface:$i
 	let i=$i+1
 done
