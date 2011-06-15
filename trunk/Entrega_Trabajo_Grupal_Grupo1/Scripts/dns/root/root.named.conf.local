@@ -1,0 +1,17 @@
+controls {};
+
+zone "tilcara.jujuy.dc.fi.uba.ar" {
+    type forward;
+    forwarders { 10.69.6.163; };
+};
+
+zone "resto.jujuy.dc.fi.uba.ar" {
+    type forward;
+    forwarders { 10.27.15.206; };
+};
+
+zone "in-addr.arpa" {
+     type master;
+     file "/etc/bind/zonas/db.reverso";
+};
+

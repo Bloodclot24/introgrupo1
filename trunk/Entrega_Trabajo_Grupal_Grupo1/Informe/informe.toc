@@ -1,0 +1,29 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Determinaci\IeC {\'o}n de las subredes}{2}
+\contentsline {section}{\numberline {2}Tablas de ruteo}{3}
+\contentsline {subsection}{\numberline {2.1}H101}{3}
+\contentsline {subsection}{\numberline {2.2}H102}{4}
+\contentsline {subsection}{\numberline {2.3}H103}{5}
+\contentsline {subsection}{\numberline {2.4}H107}{6}
+\contentsline {subsection}{\numberline {2.5}H108}{7}
+\contentsline {subsection}{\numberline {2.6}H114}{8}
+\contentsline {subsection}{\numberline {2.7}H115}{9}
+\contentsline {subsection}{\numberline {2.8}H116}{10}
+\contentsline {subsection}{\numberline {2.9}H118}{11}
+\contentsline {subsection}{\numberline {2.10}H119}{12}
+\contentsline {subsection}{\numberline {2.11}H130}{13}
+\contentsline {subsection}{\numberline {2.12}H131}{14}
+\contentsline {subsection}{\numberline {2.13}H132}{15}
+\contentsline {subsection}{\numberline {2.14}Rutas alternativas}{16}
+\contentsline {section}{\numberline {3}DNS}{17}
+\contentsline {section}{\numberline {4}Simulaci\IeC {\'o}n en la sala}{18}
+\contentsline {subsection}{\numberline {4.1}permisos.sh}{18}
+\contentsline {subsection}{\numberline {4.2}configurar\_routers.sh}{18}
+\contentsline {subsection}{\numberline {4.3}network\_interfaces.sh}{18}
+\contentsline {subsection}{\numberline {4.4}habilitar\_servicios.sh}{18}
+\contentsline {subsection}{\numberline {4.5}instalar\_servicios.sh}{18}
+\contentsline {subsection}{\numberline {4.6}instalar-root-dns.sh}{18}
+\contentsline {subsection}{\numberline {4.7}instalar-tilcara-dns.sh}{19}
+\contentsline {subsection}{\numberline {4.8}instalar-resto-dns.sh}{19}
+\contentsline {section}{\numberline {5}Conclusiones}{19}
+\contentsline {section}{\numberline {6}Anexo}{21}

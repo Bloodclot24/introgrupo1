@@ -1,0 +1,5 @@
+El comando install-resto-dns instala los archivos de configuracion necesarios para poner en funcionamiento el servidor de segundo nivel que se utiliza en las sede de tilcara.
+
+No tiene parametros de entrada.
+
+Utilizacion: sudo ./install-tilcara-dns.sh

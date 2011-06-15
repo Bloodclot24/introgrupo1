@@ -1,0 +1,3 @@
+El script instalar_servicios.sh tiene como finalidad instalar los servicios de WebServer,TelnetServer y FtpServer.
+Su utilizacion es la siguiente:
+sudo ./instalar_servicios.sh 

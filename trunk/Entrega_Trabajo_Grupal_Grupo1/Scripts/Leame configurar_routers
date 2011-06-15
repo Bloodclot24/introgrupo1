@@ -1,0 +1,4 @@
+Este script tiene como finalidad configurar un router/host/servidor sobre una interfaz determinada. Se configuran las interfaces virtuales necesarias y se cargan las tablas de ruteo.
+Utilizacion:
+sudo ./configurar_routers.sh <ROUTER/HOST/SERVIDOR> <INTERFAZ>
+

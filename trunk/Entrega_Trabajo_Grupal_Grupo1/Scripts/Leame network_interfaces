@@ -1,0 +1,5 @@
+Este script tiene como finalidad configurar la interfaz para un router/host sobre una interfaz determinada.
+Utilizacion:
+sudo ./network_interfaces.sh <ROUTER> <INTERFAZ>
+
+Las interfaces son leidas del archivo que se encuentra en /config/interfaces/ROUTER
