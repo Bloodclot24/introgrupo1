@@ -6,6 +6,9 @@ if [ ! -f '/etc/init.d/bind9' ]; then
 	sudo aptitude install bind9;
 fi
 
+#Modifico el named.conf por el necesario para resolver el DNS
+cp -f dns/named.conf /etc/bind/named.conf
+
 #Modifico la direccion del DNS al que debo buscar en esta maquina
 cp -f dns/root/resolv.conf /etc/resolv.conf
 
