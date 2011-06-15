@@ -1,0 +1,42 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	tilcara.jujuy.dc.fi.uba.ar. root.(
+			      1		; Serial
+			     30		; Refresh
+			     30		; Retry
+			     60		; Expire
+			     1h
+			     )
+@           IN      NS          tilcara.jujuy.dc.fi.uba.ar.
+@           IN      A           10.69.6.163
+
+ns          IN      CNAME       tilcara.jujuy.dc.fi.uba.ar.
+
+
+;H102
+taipei01    IN      A           10.69.6.163
+bangkok05   IN      A           10.39.25.69
+
+;H107
+taipei02    IN      A           10.69.6.162
+bangkok03   IN      A           10.39.25.67
+singapur02  IN      A           10.69.6.130
+
+;H103
+taipei03    IN      A           10.69.6.161
+bangkok02   IN      A           10.39.25.66
+tokyo02     IN      A           10.69.5.1
+
+;H108
+bangkok04   IN      A           10.39.25.68
+
+;Telnet
+singapur01  IN      A           10.69.6.129
+tokyo01     IN      A           10.69.5.130
+telnet      IN      CNAME       singapur01
+
+;Host A
+bangkok07   IN      A           10.39.25.71
+hostA       IN      CNAME       bangkok07

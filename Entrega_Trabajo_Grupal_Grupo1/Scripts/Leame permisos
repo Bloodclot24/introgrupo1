@@ -1,0 +1,7 @@
+El script permisos.sh tiene como finalidad asignar permisos de ejecucion a los scripts desarrollados
+Su modo de utilizacion es el siguiente: 
+sudo ./permisos.sh <opcional>
+
+El parametro <opcional> permite asignarle el path en el cual quiere otorgarsele los servicios.
+En caso de no poseer parametros, el script otorga los permisos a los scripts que se encuentren en el
+ directorio en el cual el mismo esta ubicado.  

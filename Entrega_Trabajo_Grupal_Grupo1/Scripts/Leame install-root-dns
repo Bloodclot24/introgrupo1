@@ -1,0 +1,5 @@
+El comando install-root-dns instala los archivos de configuracion necesarios para poner en funcionamiento el servidor root que se utiliza para comunicar los pedidos de los servidores secundarios entre si.
+
+No tiene parametros de entrada.
+
+Utilizacion: sudo ./install-root-dns.sh

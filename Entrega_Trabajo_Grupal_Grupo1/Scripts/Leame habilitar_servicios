@@ -1,0 +1,9 @@
+El script habilitar_servicios.sh tiene como finalidad habilitar los servidores Web,Telnet y FTP
+Su modo de utilizacion es el siguiente:
+sudo ./habilitar_servicios.sh <opcional>
+El parametro opcional permite la instalacion de uno de los servidores en particular, como ser,
+"WebServer" instala el servidor WebServer
+"FtpServer" instala el servidor Ftp
+"TelnetServer" instala el servidor Telnet
+
+En caso de invocarse sin parametros, habilita los tres servidores.
